@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 2</title>
+    <script>
+        // Fibonacci Series
+        function fibonacci() {
+            var n = prompt("Enter number of terms:");
+            var a = 0, b = 1, c, result = "";
+
+            for (var i = 1; i <= n; i++) {
+                result += a + " ";
+                c = a + b;
+                a = b;
+                b = c;
+            }
+            alert("Fibonacci Series: " + result);
+        }
+
+        // Numbers and Squares
+        function squares() {
+            var n = prompt("Enter a number:");
+            var result = "";
+
+            for (var i = 1; i <= n; i++) {
+                result += i + " = " + (i * i) + "\n";
+            }
+            alert(result);
+        }
+    </script>
+</head>
+
+<body>
+    <h2>JavaScript Programs</h2>
+    <button onclick="fibonacci()">Fibonacci</button>
+    <button onclick="squares()">Squares</button>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 3</title>
+</head>
+
+<body>
+
+<script type="text/javascript">
+
+function findVowel() {
+    var str = prompt("Enter a string:");
+    var pos = -1;
+
+    for (var i = 0; i < str.length; i++) {
+        if ("aeiouAEIOU".indexOf(str[i]) != -1) {
+            pos = i + 1;
+            break;
+        }
+    }
+    alert("Position of left-most vowel: " + pos);
+}
+
+function reverseNumber() {
+    var num = prompt("Enter a positive number:");
+
+    if (!/^[0-9]+$/.test(num)) {
+        alert("Invalid input!");
+        return;
+    }
+
+    num = Number(num);
+    var rev = 0;
+
+    while (num > 0) {
+        rev = rev * 10 + (num % 10);
+        num = Math.floor(num / 10);
+    }
+
+    alert("Reversed Number: " + rev);
+}
+
+</script>
+
+<button onclick="findVowel()">Find Vowel</button>
+<button onclick="reverseNumber()">Reverse Number</button>
+
+</body>
+</html>
